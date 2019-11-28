@@ -15,6 +15,11 @@ public class EjerciciosBasicosJava {
         }
         return false;
     }
+    
+    public int multa (int velocidad , boolean cumple) {
+        return 0;
+        
+    }
 
     /**
      * @param args the command line arguments
@@ -25,4 +30,10 @@ System.out.println(ejercicios.fiestaArdillas(30, false));
 System.out.println(ejercicios.fiestaArdillas(50, false));
 System.out.print(ejercicios.fiestaArdillas(70, true));
     }
+
+    
+
+
+
+
 }
