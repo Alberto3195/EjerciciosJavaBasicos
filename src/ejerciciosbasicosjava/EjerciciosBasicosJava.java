@@ -41,10 +41,42 @@ public class EjerciciosBasicosJava {
         if (matinal && madre) {
             return true;
         }
-        if (matinal || dormido) {
+        if (matinal) {
+            return false;
+        }
+        if (dormido) {
             return false;
         }
         return true;
+    }
+
+    public boolean menorPor10(int a, int b, int c) {
+        if (Math.abs(a - b) >= 10 || Math.abs(a - c) >= 10 || Math.abs(b - c) >= 10) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean digitoIgual(int a, int b) {
+        int aIzq = a / 10;
+        int aDer = a % 10;
+        int bIzq = b / 10;
+        int bDer = b % 10;
+        if (aIzq == bIzq || aIzq == bDer || aDer == bIzq || aDer == bDer){
+        return true;
+        }
+        return false;
+    }
+    
+    public boolean multiploMultiple (int numero){
+        if (numero % 3 == 0 && numero % 5 == 0){ //es un multiplo de 3 y de 5 
+            return false;
+        }
+        if (numero % 3 == 0){//el numero es multiplo de 3 ó de 5 pero no 
+                             //de los dos por que
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -64,9 +96,22 @@ public class EjerciciosBasicosJava {
         System.out.println("vanidoso " + ejercicios.vanidoso(22));
         System.out.println(ejercicios.vanidoso(23));
         System.out.println("vanidoso " + ejercicios.vanidoso(24));
-//Testeo 3
+//Testeo 4
         System.out.println("telefono " + ejercicios.telefono(false, true, true));
         System.out.println(ejercicios.telefono(true, false, true));
         System.out.println("telefono " + ejercicios.telefono(true, true, true));
+//Testeo 5
+        System.out.println("Menor10 " + ejercicios.menorPor10(1, 7, 10));
+        System.out.println(ejercicios.menorPor10(1, 7, 11));
+        System.out.println("Menor10 " + ejercicios.menorPor10(11, 1, 5));
+//Testeo 6
+        System.out.println("digitoIgual " + ejercicios.digitoIgual(12,23));
+        System.out.println(ejercicios.digitoIgual(1,7));
+        System.out.println("digitoIgual " + ejercicios.digitoIgual(1,5));
+//Testeo 7
+        System.out.println("multiploMultiple (3)" + ejercicios.multiploMultiple(3));
+        System.out.println("multiploMultiple (11)" + ejercicios.multiploMultiple(11));
+        System.out.println("multiploMultiple (15)" + ejercicios.multiploMultiple(15));
+
     }
 }
