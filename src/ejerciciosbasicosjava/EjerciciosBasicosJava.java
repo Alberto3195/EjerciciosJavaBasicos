@@ -30,11 +30,21 @@ public class EjerciciosBasicosJava {
         }
     }
 
-    public int vanidoso(int numero, boolean multiplo) {
-        if (numero % 11 == 0 || numero % 11 == 11) {
+    public boolean vanidoso(int numero) {
+        if (numero % 11 == 0 || numero % 11 == 1) {
             return true;
         }
         return false;
+    }
+
+    public boolean telefono(boolean matinal, boolean madre, boolean dormido) {
+        if (matinal && madre) {
+            return true;
+        }
+        if (matinal || dormido) {
+            return false;
+        }
+        return true;
     }
 
     /**
@@ -42,16 +52,21 @@ public class EjerciciosBasicosJava {
      */
     public static void main(String[] args) {
         EjerciciosBasicosJava ejercicios = new EjerciciosBasicosJava();
-        System.out.println(ejercicios.fiestaArdillas(30, false));
+//Testeo 1
+        System.out.println("fiestaArdillas " + ejercicios.fiestaArdillas(30, false));
         System.out.println(ejercicios.fiestaArdillas(50, false));
-        System.out.println(ejercicios.fiestaArdillas(70, true));
-
-        System.out.println(ejercicios.multa(60, false));
+        System.out.println("fiestaArdillas " + ejercicios.fiestaArdillas(70, true));
+//Testeo 2
+        System.out.println("multa " + ejercicios.multa(60, false));
         System.out.println(ejercicios.multa(65, false));
-        System.out.println(ejercicios.multa(65, true));
-
-        System.out.println(ejercicios.vanidoso(22, true));
-        System.out.println(ejercicios.vanidoso(23, true));
-        System.out.println(ejercicios.vanidoso(24, false));
+        System.out.println("multa " + ejercicios.multa(65, true));
+//Testeo 3
+        System.out.println("vanidoso " + ejercicios.vanidoso(22));
+        System.out.println(ejercicios.vanidoso(23));
+        System.out.println("vanidoso " + ejercicios.vanidoso(24));
+//Testeo 3
+        System.out.println("telefono " + ejercicios.telefono(false, true, true));
+        System.out.println(ejercicios.telefono(true, false, true));
+        System.out.println("telefono " + ejercicios.telefono(true, true, true));
     }
 }
