@@ -79,6 +79,33 @@ public class EjerciciosBasicosJava {
         return false;
     }
 
+     public boolean menor20(int a) {
+        return (a + 1) % 20 == 0 || (a + 2) % 20 == 0;
+    }
+
+    public int loteria(int a, int b, int c) {
+        if (a == b && b == c && a == 2) {
+            return 10;
+        }
+        if (a == b && b == c) {
+            return 5;
+        }
+        if (a != b && a != c) {
+            return 1;
+        }
+        return 0;
+    }
+
+    public int dados(int a, int b, boolean dobles) {
+        int c = 0;
+        c = a + b;
+
+        if (dobles == true && a == b) {
+            return c + 1;
+        }
+        return c;
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -112,6 +139,7 @@ public class EjerciciosBasicosJava {
         System.out.println("multiploMultiple (3)" + ejercicios.multiploMultiple(3));
         System.out.println("multiploMultiple (11)" + ejercicios.multiploMultiple(11));
         System.out.println("multiploMultiple (15)" + ejercicios.multiploMultiple(15));
-
+//Testeo 8
+        
     }
 }
